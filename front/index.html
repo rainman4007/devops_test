@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <style>
+            span {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello <span id="name"></span>, I feel <span id="feel"></span> Today!</h1>
+    </body>
+    <script type="application/javascript">
+
+        const API_ENDPOINT = './api/greeting'; // TODO: Replace this by api endpoint
+        const DEFAULT_DATA = {name: 'everybody', feel: 'lucky'};
+        
+        const render = (data={}) => {
+            document.getElementById('name').innerHTML = data['name'];
+            document.getElementById('feel').innerHTML = data['feel'];
+        }
+
+        if (API_ENDPOINT) {
+            fetch(API_ENDPOINT).then(res => res.json()).then(render);
+        } else {
+            render(DEFAULT_DATA)
+        }
+    </script>
+</html>
