@@ -1,6 +1,5 @@
-# DevOps Engineer Interview
-This is an interview for the DevOps engineer role at BMO Capital Markets' Data Cognition Team. 
-
+# DevOps Engineer Interview Assessment
+ 
 ## Requirements 
 1. Dockerize a given web application including both client-side and server-side code assets.
 2. Set up a CI/CD pipeline to automate the procedure of building/deploying this application. 
